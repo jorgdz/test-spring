@@ -69,7 +69,7 @@ public class ClienteServiceImpl implements ClienteService{
 	public Cliente findById(Long id) {
 		return this.clientes.stream()
 			.filter(c -> c.getId() == id)
-			.findFirst()
-			.get();
+			.findAny()
+			.orElse(null);
 	}
 }

@@ -48,7 +48,7 @@ public class ClienteController {
 			Map<String, String> error = new HashMap<String, String>();
 			error.put("message", "No se ha encontrado el cliente con id " + id);
 			return ResponseEntity
-				.status(HttpStatus.NO_CONTENT)
+				.status(HttpStatus.NOT_FOUND)
 				.body(error);
 		}
 		
